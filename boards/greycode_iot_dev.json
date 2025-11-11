@@ -6,20 +6,31 @@
     "f_flash": "80000000L",
     "flash_mode": "dio",
     "mcu": "esp32",
-    "variant": "esp32"
+    "variant": "esp32",
+    "partitions": "default.csv"
   },
-  "connectivity": ["wifi", "bluetooth"],
+  "connectivity": [
+    "wifi",
+    "bluetooth",
+    "gps"
+  ],
   "debug": {
     "openocd_board": "esp32-wrover-kit.cfg"
   },
-  "frameworks": ["arduino"],
+  "frameworks": [
+    "arduino",
+    "espidf"
+  ],
   "name": "Greycode IoT Dev Board",
   "upload": {
     "maximum_ram_size": 327680,
-    "maximum_size": 4194304,
+    "maximum_size": 8388608,
     "require_upload_port": true,
-    "speed": 921600
+    "speed": 921600,
+    "flash_size": "8MB",
+    "protocol": "esptool"
   },
-  "url": "https://greycode.co.za/",
-  "vendor": "Greycode"
+  "url": "https://github.com/greycode-za",
+  "vendor": "Greycode",
+  "version": "1.0.0"
 }
